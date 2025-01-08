@@ -1,5 +1,5 @@
 Assembler report for TLC_Project
-Wed Jan 08 19:45:05 2025
+Wed Jan 08 20:36:55 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jan 08 19:45:05 2025 ;
+; Assembler Status      ; Successful - Wed Jan 08 20:36:55 2025 ;
 ; Revision Name         ; TLC_Project                           ;
 ; Top-level Entity Name ; TLC_Project                           ;
 ; Family                ; Cyclone III                           ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                          ;
 +----------------+------------------------------------------------------------------+
 ; Device         ; EP3C120F780C7                                                    ;
-; JTAG usercode  ; 0x0057290E                                                       ;
-; Checksum       ; 0x0057290E                                                       ;
+; JTAG usercode  ; 0x00578E73                                                       ;
+; Checksum       ; 0x00578E73                                                       ;
 +----------------+------------------------------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jan 08 19:45:02 2025
+    Info: Processing started: Wed Jan 08 20:36:53 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off TLC_Project -c TLC_Project
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4597 megabytes
-    Info: Processing ended: Wed Jan 08 19:45:05 2025
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4598 megabytes
+    Info: Processing ended: Wed Jan 08 20:36:55 2025
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 
 

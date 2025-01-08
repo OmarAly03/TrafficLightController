@@ -49,17 +49,11 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name VERILOG_FILE bin2bcd.v
-set_global_assignment -name VERILOG_FILE top.v
-set_global_assignment -name VERILOG_FILE seven_segment_decoder.v
-set_global_assignment -name VERILOG_FILE counter_divider.v
-set_global_assignment -name VERILOG_FILE Control.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_location_assignment PIN_AH15 -to CLOCK_50
-set_global_assignment -name VERILOG_FILE clock_divider_1hz.v
 set_location_assignment PIN_AD7 -to reset_PB0
 set_location_assignment PIN_AC14 -to NorthSensor
 set_location_assignment PIN_AD18 -to EastSensor
@@ -80,7 +74,16 @@ set_location_assignment PIN_AF18 -to NorthGreen
 set_location_assignment PIN_AD19 -to EastRed
 set_location_assignment PIN_AE15 -to EastYellow
 set_location_assignment PIN_AC17 -to EastGreen
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/altera/13.1/TLC_Project/simulation/qsim/" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE counter_split.v
+set_global_assignment -name VERILOG_FILE bin2bcd.v
+set_global_assignment -name VERILOG_FILE top.v
+set_global_assignment -name VERILOG_FILE seven_segment_decoder.v
+set_global_assignment -name VERILOG_FILE counter_divider.v
+set_global_assignment -name VERILOG_FILE Control.v
+set_global_assignment -name VERILOG_FILE clock_divider_1hz.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

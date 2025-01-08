@@ -2,41 +2,53 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -3.181
-TNS   : -67.170
+Type  : Slow 1200mV 85C Model Setup 'counter_divider:div|q[5]'
+Slack : -5.840
+TNS   : -41.509
 
 Type  : Slow 1200mV 85C Model Setup 'clock_divider_1hz:comb_3|clk_out'
-Slack : -2.991
-TNS   : -20.699
+Slack : -3.904
+TNS   : -27.567
 
-Type  : Slow 1200mV 85C Model Setup 'counter_divider:div|q[5]'
-Slack : -2.989
-TNS   : -18.282
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -3.373
+TNS   : -68.547
+
+Type  : Slow 1200mV 85C Model Setup 'Control:controller|counter[1]'
+Slack : -1.894
+TNS   : -11.001
 
 Type  : Slow 1200mV 85C Model Setup 'Control:controller|state[0]'
-Slack : 0.136
-TNS   : 0.000
+Slack : -0.048
+TNS   : -0.048
 
-Type  : Slow 1200mV 85C Model Hold 'Control:controller|state[0]'
-Slack : -1.518
-TNS   : -3.467
+Type  : Slow 1200mV 85C Model Hold 'Control:controller|counter[1]'
+Slack : -5.933
+TNS   : -39.868
 
 Type  : Slow 1200mV 85C Model Hold 'clock_divider_1hz:comb_3|clk_out'
-Slack : -1.424
-TNS   : -8.151
+Slack : -3.320
+TNS   : -7.899
+
+Type  : Slow 1200mV 85C Model Hold 'Control:controller|state[0]'
+Slack : -1.046
+TNS   : -2.349
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : -0.139
-TNS   : -0.139
+Slack : -0.149
+TNS   : -0.261
 
 Type  : Slow 1200mV 85C Model Hold 'counter_divider:div|q[5]'
-Slack : 0.436
+Slack : 0.598
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
 TNS   : -45.405
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Control:controller|counter[1]'
+Slack : -1.386
+TNS   : -55.497
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter_divider:div|q[5]'
 Slack : -1.285
@@ -47,39 +59,47 @@ Slack : -1.285
 TNS   : -11.565
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Control:controller|state[0]'
-Slack : 0.390
+Slack : 0.373
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -2.867
-TNS   : -58.214
 
 Type  : Slow 1200mV 0C Model Setup 'counter_divider:div|q[5]'
-Slack : -2.641
-TNS   : -15.781
+Slack : -5.239
+TNS   : -36.378
 
 Type  : Slow 1200mV 0C Model Setup 'clock_divider_1hz:comb_3|clk_out'
-Slack : -2.525
-TNS   : -18.015
+Slack : -3.462
+TNS   : -24.078
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.014
+TNS   : -59.205
+
+Type  : Slow 1200mV 0C Model Setup 'Control:controller|counter[1]'
+Slack : -1.653
+TNS   : -9.790
 
 Type  : Slow 1200mV 0C Model Setup 'Control:controller|state[0]'
-Slack : 0.100
-TNS   : 0.000
+Slack : -0.039
+TNS   : -0.039
 
-Type  : Slow 1200mV 0C Model Hold 'Control:controller|state[0]'
-Slack : -1.309
-TNS   : -2.988
+Type  : Slow 1200mV 0C Model Hold 'Control:controller|counter[1]'
+Slack : -5.309
+TNS   : -35.688
 
 Type  : Slow 1200mV 0C Model Hold 'clock_divider_1hz:comb_3|clk_out'
-Slack : -1.231
-TNS   : -7.084
+Slack : -3.001
+TNS   : -7.196
+
+Type  : Slow 1200mV 0C Model Hold 'Control:controller|state[0]'
+Slack : -0.897
+TNS   : -2.053
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : -0.119
-TNS   : -0.119
+Slack : -0.098
+TNS   : -0.193
 
 Type  : Slow 1200mV 0C Model Hold 'counter_divider:div|q[5]'
-Slack : 0.401
+Slack : 0.552
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
@@ -94,45 +114,57 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_divider_1hz:comb_3|clk_o
 Slack : -1.285
 TNS   : -11.565
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Control:controller|counter[1]'
+Slack : -1.271
+TNS   : -45.958
+
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Control:controller|state[0]'
-Slack : 0.435
+Slack : 0.426
 TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'clock_divider_1hz:comb_3|clk_out'
-Slack : -1.090
-TNS   : -5.736
-
-Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -1.031
-TNS   : -16.161
 
 Type  : Fast 1200mV 0C Model Setup 'counter_divider:div|q[5]'
-Slack : -0.950
-TNS   : -5.041
+Slack : -2.703
+TNS   : -18.235
+
+Type  : Fast 1200mV 0C Model Setup 'clock_divider_1hz:comb_3|clk_out'
+Slack : -1.534
+TNS   : -9.796
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.160
+TNS   : -17.626
+
+Type  : Fast 1200mV 0C Model Setup 'Control:controller|counter[1]'
+Slack : -0.380
+TNS   : -2.080
 
 Type  : Fast 1200mV 0C Model Setup 'Control:controller|state[0]'
-Slack : 0.304
+Slack : 0.185
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'Control:controller|counter[1]'
+Slack : -3.099
+TNS   : -20.916
+
 Type  : Fast 1200mV 0C Model Hold 'clock_divider_1hz:comb_3|clk_out'
-Slack : -0.904
-TNS   : -5.371
+Slack : -1.819
+TNS   : -4.831
 
 Type  : Fast 1200mV 0C Model Hold 'Control:controller|state[0]'
-Slack : -0.819
-TNS   : -2.040
+Slack : -0.603
+TNS   : -1.545
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : -0.261
-TNS   : -0.365
+Slack : -0.249
+TNS   : -0.397
 
 Type  : Fast 1200mV 0C Model Hold 'counter_divider:div|q[5]'
-Slack : 0.192
+Slack : 0.266
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -38.007
+TNS   : -38.029
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter_divider:div|q[5]'
 Slack : -1.000
@@ -142,8 +174,12 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_divider_1hz:comb_3|clk_o
 Slack : -1.000
 TNS   : -9.000
 
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Control:controller|counter[1]'
+Slack : -0.467
+TNS   : -13.930
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Control:controller|state[0]'
-Slack : 0.267
+Slack : 0.287
 TNS   : 0.000
 
 ------------------------------------------------------------

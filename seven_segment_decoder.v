@@ -14,12 +14,6 @@ module seven_segment_decoder(BIN, SSD);
 		7 :SSD=7'b1111000;
 		8 :SSD=7'b0000000;
 		9 :SSD=7'b0011000;
-		10:SSD=7'b1110111;
-		11:SSD=7'b0011111;
-		12:SSD=7'b1001110;
-		13:SSD=7'b0111101;
-		14:SSD=7'b1001111;
-		15:SSD=7'b1000111;
 		endcase
 	end
 endmodule

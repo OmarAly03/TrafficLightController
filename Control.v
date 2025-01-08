@@ -31,12 +31,12 @@ module Control(
             turn = 0;
             current = 0;
             counter = 0;
-            NorthRed = 0;
-            NorthYellow = 0;
-            NorthGreen = 0;
-            EastRed = 0;
-            EastYellow = 0;
-            EastGreen = 0;
+            NorthRed = 1;
+            NorthYellow = 1;
+            NorthGreen = 1;
+            EastRed = 1;
+            EastYellow = 1;
+            EastGreen = 1;
         end
     
     always @(posedge clk)
@@ -44,7 +44,7 @@ module Control(
            case(state)
             S2_East_Y_North_Y:
                 begin
-                    if(counter == 6)
+                    if(counter == 5)
                         begin
                             counter <= 0;
                             state <= S3_East_G_North_R;
@@ -70,7 +70,7 @@ module Control(
                 end
             S4_North_Y_East_Y:
                 begin
-                    if(counter == 6)
+                    if(counter == 5)
                         begin
                             counter <= 0;
                             state <= S0_North_G_East_R;

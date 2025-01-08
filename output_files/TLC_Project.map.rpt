@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TLC_Project
-Wed Jan 08 19:44:49 2025
+Wed Jan 08 20:36:40 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -21,9 +21,11 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  13. Parameter Settings for User Entity Instance: counter_divider:div
  14. Parameter Settings for User Entity Instance: clock_divider_1hz:comb_3
  15. Parameter Settings for User Entity Instance: Control:controller
- 16. Port Connectivity Checks: "Control:controller"
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 16. Parameter Settings for Inferred Entity Instance: counter_split:north_split|lpm_divide:Mod0
+ 17. Parameter Settings for Inferred Entity Instance: counter_split:north_split|lpm_divide:Div0
+ 18. Port Connectivity Checks: "Control:controller"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -49,13 +51,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 08 19:44:49 2025      ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 08 20:36:40 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TLC_Project                                ;
 ; Top-level Entity Name              ; TLC_Project                                ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 109                                        ;
-;     Total combinational functions  ; 103                                        ;
+; Total logic elements               ; 162                                        ;
+;     Total combinational functions  ; 157                                        ;
 ;     Dedicated logic registers      ; 57                                         ;
 ; Total registers                    ; 57                                         ;
 ; Total pins                         ; 21                                         ;
@@ -164,18 +166,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; bin2bcd.v                        ; yes             ; User Verilog HDL File  ; C:/altera/13.1/TLC_Project/bin2bcd.v               ;         ;
-; top.v                            ; yes             ; User Verilog HDL File  ; C:/altera/13.1/TLC_Project/top.v                   ;         ;
-; seven_segment_decoder.v          ; yes             ; User Verilog HDL File  ; C:/altera/13.1/TLC_Project/seven_segment_decoder.v ;         ;
-; counter_divider.v                ; yes             ; User Verilog HDL File  ; C:/altera/13.1/TLC_Project/counter_divider.v       ;         ;
-; Control.v                        ; yes             ; User Verilog HDL File  ; C:/altera/13.1/TLC_Project/Control.v               ;         ;
-; clock_divider_1hz.v              ; yes             ; User Verilog HDL File  ; C:/altera/13.1/TLC_Project/clock_divider_1hz.v     ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; counter_split.v                  ; yes             ; User Verilog HDL File        ; C:/altera/13.1/TLC_Project/counter_split.v                         ;         ;
+; top.v                            ; yes             ; User Verilog HDL File        ; C:/altera/13.1/TLC_Project/top.v                                   ;         ;
+; seven_segment_decoder.v          ; yes             ; User Verilog HDL File        ; C:/altera/13.1/TLC_Project/seven_segment_decoder.v                 ;         ;
+; counter_divider.v                ; yes             ; User Verilog HDL File        ; C:/altera/13.1/TLC_Project/counter_divider.v                       ;         ;
+; Control.v                        ; yes             ; User Verilog HDL File        ; C:/altera/13.1/TLC_Project/Control.v                               ;         ;
+; clock_divider_1hz.v              ; yes             ; User Verilog HDL File        ; C:/altera/13.1/TLC_Project/clock_divider_1hz.v                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc      ;         ;
+; db/lpm_divide_a8m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/TLC_Project/db/lpm_divide_a8m.tdf                   ;         ;
+; db/sign_div_unsign_8kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/TLC_Project/db/sign_div_unsign_8kh.tdf              ;         ;
+; db/alt_u_div_r2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/TLC_Project/db/alt_u_div_r2f.tdf                    ;         ;
+; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/TLC_Project/db/add_sub_unc.tdf                      ;         ;
+; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/TLC_Project/db/add_sub_vnc.tdf                      ;         ;
+; db/lpm_divide_7gm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.1/TLC_Project/db/lpm_divide_7gm.tdf                   ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -183,17 +195,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 109            ;
+; Estimated Total logic elements              ; 162            ;
 ;                                             ;                ;
-; Total combinational functions               ; 103            ;
+; Total combinational functions               ; 157            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 31             ;
-;     -- 3 input functions                    ; 10             ;
-;     -- <=2 input functions                  ; 62             ;
+;     -- 4 input functions                    ; 36             ;
+;     -- 3 input functions                    ; 30             ;
+;     -- <=2 input functions                  ; 91             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 70             ;
-;     -- arithmetic mode                      ; 33             ;
+;     -- normal mode                          ; 110            ;
+;     -- arithmetic mode                      ; 47             ;
 ;                                             ;                ;
 ; Total registers                             ; 57             ;
 ;     -- Dedicated logic registers            ; 57             ;
@@ -203,22 +215,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 33             ;
-; Total fan-out                               ; 466            ;
-; Average fan-out                             ; 2.31           ;
+; Total fan-out                               ; 596            ;
+; Average fan-out                             ; 2.33           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                              ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+
-; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Library Name ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+
-; |TLC_Project                  ; 103 (10)          ; 57 (15)      ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |TLC_Project                          ; work         ;
-;    |Control:controller|       ; 27 (27)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|Control:controller       ; work         ;
-;    |bin2bcd:east_converter|   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|bin2bcd:east_converter   ; work         ;
-;    |clock_divider_1hz:comb_3| ; 54 (54)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|clock_divider_1hz:comb_3 ; work         ;
-;    |counter_divider:div|      ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_divider:div      ; work         ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                           ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                    ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |TLC_Project                              ; 157 (14)          ; 57 (15)      ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |TLC_Project                                                                                                                           ; work         ;
+;    |Control:controller|                   ; 26 (26)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|Control:controller                                                                                                        ; work         ;
+;    |clock_divider_1hz:comb_3|             ; 54 (54)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|clock_divider_1hz:comb_3                                                                                                  ; work         ;
+;    |counter_divider:div|                  ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_divider:div                                                                                                       ; work         ;
+;    |counter_split:north_split|            ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_7gm:auto_generated|  ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Div0|lpm_divide_7gm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Div0|lpm_divide_7gm:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                |alt_u_div_r2f:divider|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Div0|lpm_divide_7gm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_r2f:divider ; work         ;
+;       |lpm_divide:Mod0|                   ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_a8m:auto_generated|  ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Mod0|lpm_divide_a8m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Mod0|lpm_divide_a8m:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                |alt_u_div_r2f:divider|    ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Mod0|lpm_divide_a8m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_r2f:divider ; work         ;
+;    |seven_segment_decoder:ssd0|           ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|seven_segment_decoder:ssd0                                                                                                ; work         ;
+;    |seven_segment_decoder:ssd1|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|seven_segment_decoder:ssd1                                                                                                ; work         ;
+;    |seven_segment_decoder:ssd2|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|seven_segment_decoder:ssd2                                                                                                ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,19 +258,33 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+----------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                    ;
-+----------------------------------------------------+--------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal      ; Free of Timing Hazards ;
-+----------------------------------------------------+--------------------------+------------------------+
-; Control:controller|NorthRed                        ; Control:controller|Mux11 ; yes                    ;
-; Control:controller|NorthYellow                     ; Control:controller|Mux11 ; yes                    ;
-; Control:controller|NorthGreen                      ; Control:controller|Mux11 ; yes                    ;
-; Control:controller|EastRed                         ; Control:controller|Mux11 ; yes                    ;
-; Control:controller|EastYellow                      ; Control:controller|Mux11 ; yes                    ;
-; Control:controller|EastGreen                       ; Control:controller|Mux11 ; yes                    ;
-; Number of user-specified and inferred latches = 6  ;                          ;                        ;
-+----------------------------------------------------+--------------------------+------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++-----------------------------------------------------+---------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal             ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------------+------------------------+
+; Control:controller|NorthRed                         ; Control:controller|Mux11        ; yes                    ;
+; Control:controller|NorthYellow                      ; Control:controller|Mux11        ; yes                    ;
+; Control:controller|NorthGreen                       ; Control:controller|Mux11        ; yes                    ;
+; Control:controller|EastRed                          ; Control:controller|Mux11        ; yes                    ;
+; Control:controller|EastYellow                       ; Control:controller|Mux11        ; yes                    ;
+; Control:controller|EastGreen                        ; Control:controller|Mux11        ; yes                    ;
+; seven_segment_decoder:ssd2|SSD[0]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd0|SSD[0]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd2|SSD[1]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd0|SSD[1]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd2|SSD[2]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd0|SSD[2]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd2|SSD[3]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd0|SSD[3]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd2|SSD[4]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd0|SSD[4]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd2|SSD[5]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd0|SSD[5]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd2|SSD[6]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; seven_segment_decoder:ssd0|SSD[6]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
+; Number of user-specified and inferred latches = 20  ;                                 ;                        ;
++-----------------------------------------------------+---------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -283,7 +320,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |TLC_Project|Control:controller|counter[0] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |TLC_Project|HEX[5]~reg0                   ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |TLC_Project|Control:controller|counter[1] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
@@ -321,6 +359,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: counter_split:north_split|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_a8m ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: counter_split:north_split|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_7gm ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Control:controller"                                                                                                                           ;
 +-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -346,9 +430,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jan 08 19:44:48 2025
+    Info: Processing started: Wed Jan 08 20:36:39 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TLC_Project -c TLC_Project
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file counter_split.v
+    Info (12023): Found entity 1: counter_split
 Info (12021): Found 1 design units, including 1 entities, in source file bin2bcd.v
     Info (12023): Found entity 1: bin2bcd
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
@@ -383,31 +469,101 @@ Info (10041): Inferred latch for "EastRed" at Control.v(135)
 Info (10041): Inferred latch for "NorthGreen" at Control.v(135)
 Info (10041): Inferred latch for "NorthYellow" at Control.v(135)
 Info (10041): Inferred latch for "NorthRed" at Control.v(135)
-Info (12128): Elaborating entity "bin2bcd" for hierarchy "bin2bcd:north_converter"
-Warning (10230): Verilog HDL assignment warning at bin2bcd.v(17): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "counter_split" for hierarchy "counter_split:north_split"
+Warning (10230): Verilog HDL assignment warning at counter_split.v(8): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at counter_split.v(9): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "seven_segment_decoder" for hierarchy "seven_segment_decoder:ssd0"
+Warning (10270): Verilog HDL Case Statement warning at seven_segment_decoder.v(6): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at seven_segment_decoder.v(6): inferring latch(es) for variable "SSD", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "SSD[0]" at seven_segment_decoder.v(6)
+Info (10041): Inferred latch for "SSD[1]" at seven_segment_decoder.v(6)
+Info (10041): Inferred latch for "SSD[2]" at seven_segment_decoder.v(6)
+Info (10041): Inferred latch for "SSD[3]" at seven_segment_decoder.v(6)
+Info (10041): Inferred latch for "SSD[4]" at seven_segment_decoder.v(6)
+Info (10041): Inferred latch for "SSD[5]" at seven_segment_decoder.v(6)
+Info (10041): Inferred latch for "SSD[6]" at seven_segment_decoder.v(6)
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "counter_split:north_split|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "counter_split:north_split|Div0"
+Info (12130): Elaborated megafunction instantiation "counter_split:north_split|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "counter_split:north_split|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_a8m.tdf
+    Info (12023): Found entity 1: lpm_divide_a8m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8kh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_r2f.tdf
+    Info (12023): Found entity 1: alt_u_div_r2f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_unc.tdf
+    Info (12023): Found entity 1: add_sub_unc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
+    Info (12023): Found entity 1: add_sub_vnc
+Info (12130): Elaborated megafunction instantiation "counter_split:north_split|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "counter_split:north_split|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_7gm.tdf
+    Info (12023): Found entity 1: lpm_divide_7gm
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd1|SSD[0]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd3|SSD[0]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd1|SSD[2]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd3|SSD[2]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd1|SSD[3]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd3|SSD[3]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd1|SSD[4]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd3|SSD[4]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd1|SSD[5]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd3|SSD[5]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd1|SSD[6]" is permanently enabled
+Warning (14026): LATCH primitive "seven_segment_decoder:ssd3|SSD[6]" is permanently enabled
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "Control:controller|EastGreen" merged with LATCH primitive "Control:controller|NorthRed"
     Info (13026): Duplicate LATCH primitive "Control:controller|EastYellow" merged with LATCH primitive "Control:controller|NorthYellow"
     Info (13026): Duplicate LATCH primitive "Control:controller|EastRed" merged with LATCH primitive "Control:controller|NorthGreen"
+    Info (13026): Duplicate LATCH primitive "seven_segment_decoder:ssd0|SSD[0]" merged with LATCH primitive "seven_segment_decoder:ssd2|SSD[0]"
+    Info (13026): Duplicate LATCH primitive "seven_segment_decoder:ssd0|SSD[1]" merged with LATCH primitive "seven_segment_decoder:ssd2|SSD[1]"
+    Info (13026): Duplicate LATCH primitive "seven_segment_decoder:ssd0|SSD[2]" merged with LATCH primitive "seven_segment_decoder:ssd2|SSD[2]"
+    Info (13026): Duplicate LATCH primitive "seven_segment_decoder:ssd0|SSD[3]" merged with LATCH primitive "seven_segment_decoder:ssd2|SSD[3]"
+    Info (13026): Duplicate LATCH primitive "seven_segment_decoder:ssd0|SSD[4]" merged with LATCH primitive "seven_segment_decoder:ssd2|SSD[4]"
+    Info (13026): Duplicate LATCH primitive "seven_segment_decoder:ssd0|SSD[5]" merged with LATCH primitive "seven_segment_decoder:ssd2|SSD[5]"
+    Info (13026): Duplicate LATCH primitive "seven_segment_decoder:ssd0|SSD[6]" merged with LATCH primitive "seven_segment_decoder:ssd2|SSD[6]"
 Warning (13012): Latch Control:controller|NorthRed has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|state[0]
 Warning (13012): Latch Control:controller|NorthYellow has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|state[0]
 Warning (13012): Latch Control:controller|NorthGreen has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|state[1]
+Warning (13012): Latch seven_segment_decoder:ssd2|SSD[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|counter[1]
+Warning (13012): Latch seven_segment_decoder:ssd2|SSD[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|counter[1]
+Warning (13012): Latch seven_segment_decoder:ssd2|SSD[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|counter[1]
+Warning (13012): Latch seven_segment_decoder:ssd2|SSD[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|counter[1]
+Warning (13012): Latch seven_segment_decoder:ssd2|SSD[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|counter[1]
+Warning (13012): Latch seven_segment_decoder:ssd2|SSD[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|counter[1]
+Warning (13012): Latch seven_segment_decoder:ssd2|SSD[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|counter[1]
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 131 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 183 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 110 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4626 megabytes
-    Info: Processing ended: Wed Jan 08 19:44:49 2025
+    Info (21061): Implemented 162 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4629 megabytes
+    Info: Processing ended: Wed Jan 08 20:36:40 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
