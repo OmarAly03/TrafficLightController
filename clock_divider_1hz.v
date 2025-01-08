@@ -3,7 +3,7 @@ module clock_divider_1hz (
     input wire reset,      // Asynchronous reset
     output reg clk_out     // 1 Hz output clock
 );
-    parameter DIV_FACTOR = 49_999_999; // Division factor
+    parameter DIV_FACTOR = 50_000_000; // Division factor
     reg [25:0] counter;               // 26-bit counter (enough to count up to 50 million)
 
     always @(posedge clk_in or negedge reset) begin

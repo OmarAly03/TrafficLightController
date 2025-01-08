@@ -169,6 +169,27 @@ module Control(
                         EastYellow = 1;
                         EastGreen = 0;
                     end
+                S1_Check:
+                    begin
+                        if(current == 0)
+                            begin
+                                NorthRed = 1;
+                                NorthYellow = 1;
+                                NorthGreen = 0;
+                                EastRed = 0;
+                                EastYellow = 1;
+                                EastGreen = 1;
+                            end
+                        else
+                            begin
+                                NorthRed = 0;
+                                NorthYellow = 1;
+                                NorthGreen = 1;
+                                EastRed = 1;
+                                EastYellow = 1;
+                                EastGreen = 0;
+                            end
+                    end
             endcase
         end
 endmodule
