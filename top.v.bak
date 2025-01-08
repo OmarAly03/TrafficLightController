@@ -1,0 +1,97 @@
+module top(
+    input CLOCK_50,
+    input NorthSensor,
+    input EastSensor,
+    output NorthRed,
+    output NorthYellow,
+    output NorthGreen,
+    output EastRed,
+    output EastYellow,
+    output EastGreen,
+    output [6:0] HEX0,
+    output [6:0] HEX1,
+    output [6:0] HEX2,
+    output [6:0] HEX3,
+    output reg EN1,
+    output reg EN2,
+    output reg EN3,
+    output reg EN4
+);
+    wire clk_d;
+    wire [2:0] state;
+    wire [4:0] counter;
+    wire [3:0] north_tens, north_ones;
+    wire [3:0] east_tens, east_ones;
+    reg [6:0] HEX;
+    reg [1:0] count;
+
+    // Clock divider instantiation
+    counter_divider div(.c_clk(CLOCK_50), .clk_d(clk_d));
+
+    // Main controller instantiation
+    Control controller(
+        .clk(clk_d),
+        .NorthSensor(NorthSensor),
+        .EastSensor(EastSensor),
+        .NorthRed(NorthRed),
+        .NorthYellow(NorthYellow),
+        .NorthGreen(NorthGreen),
+        .EastRed(EastRed),
+        .EastYellow(EastYellow),
+        .EastGreen(EastGreen),
+        .state(state),
+        .counter(counter)
+    );
+
+    // Binary to BCD converter for counter
+    bin2bcd converter(
+        .binary(counter),
+        .tens(tens),
+        .ones(ones)
+    );
+
+    // Seven segment decoders
+    seven_segment_decoder ssd0(.BIN(ones), .SSD(HEX0));
+    seven_segment_decoder ssd1(.BIN(tens), .SSD(HEX1));
+    seven_segment_decoder ssd2(.BIN(ones), .SSD(HEX2));
+    seven_segment_decoder ssd3(.BIN(tens), .SSD(HEX3));
+
+    // Display multiplexing logic (your existing code)
+    always @(posedge clk_d) begin
+        case (count)
+            2'b00: begin
+                EN1 <= 0;
+                EN2 <= 0;
+                EN3 <= 0;
+                EN4 <= 1;
+                HEX <= HEX0;
+                count <= 2'b01;
+            end
+            2'b01: begin
+                EN1 <= 0;
+                EN2 <= 0;
+                EN3 <= 1;
+                EN4 <= 0;
+                HEX <= HEX1;
+                count <= 2'b10;
+            end
+            2'b10: begin
+                EN1 <= 0;
+                EN2 <= 1;
+                EN3 <= 0;
+                EN4 <= 0;
+                HEX <= HEX2;
+                count <= 2'b11;
+            end
+            2'b11: begin
+                EN1 <= 1;
+                EN2 <= 0;
+                EN3 <= 0;
+                EN4 <= 0;
+                HEX <= HEX3;
+                count <= 2'b00;
+            end
+            default: count <= 2'b00;
+        endcase
+    end
+endmodule

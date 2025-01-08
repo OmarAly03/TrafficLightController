@@ -1,0 +1,633 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "01/08/2025 19:54:54"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    TLC_Project
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module TLC_Project_vlg_sample_tst(
+	CLOCK_50,
+	EastSensor,
+	NorthSensor,
+	reset_PB0,
+	sampler_tx
+);
+input  CLOCK_50;
+input  EastSensor;
+input  NorthSensor;
+input  reset_PB0;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(CLOCK_50 or EastSensor or NorthSensor or reset_PB0)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module TLC_Project_vlg_check_tst (
+	EN1,
+	EN2,
+	EN3,
+	EN4,
+	EastGreen,
+	EastRed,
+	EastYellow,
+	HEX,
+	NorthGreen,
+	NorthRed,
+	NorthYellow,
+	sampler_rx
+);
+input  EN1;
+input  EN2;
+input  EN3;
+input  EN4;
+input  EastGreen;
+input  EastRed;
+input  EastYellow;
+input [6:0] HEX;
+input  NorthGreen;
+input  NorthRed;
+input  NorthYellow;
+input sampler_rx;
+
+reg  EN1_expected;
+reg  EN2_expected;
+reg  EN3_expected;
+reg  EN4_expected;
+reg  EastGreen_expected;
+reg  EastRed_expected;
+reg  EastYellow_expected;
+reg [6:0] HEX_expected;
+reg  NorthGreen_expected;
+reg  NorthRed_expected;
+reg  NorthYellow_expected;
+
+reg  EN1_prev;
+reg  EN2_prev;
+reg  EN3_prev;
+reg  EN4_prev;
+reg  EastGreen_prev;
+reg  EastRed_prev;
+reg  EastYellow_prev;
+reg [6:0] HEX_prev;
+reg  NorthGreen_prev;
+reg  NorthRed_prev;
+reg  NorthYellow_prev;
+
+reg  EN1_expected_prev;
+reg  EN2_expected_prev;
+reg  EN3_expected_prev;
+reg  EN4_expected_prev;
+reg  EastGreen_expected_prev;
+reg  EastRed_expected_prev;
+reg  EastYellow_expected_prev;
+reg [6:0] HEX_expected_prev;
+reg  NorthGreen_expected_prev;
+reg  NorthRed_expected_prev;
+reg  NorthYellow_expected_prev;
+
+reg  last_EN1_exp;
+reg  last_EN2_exp;
+reg  last_EN3_exp;
+reg  last_EN4_exp;
+reg  last_EastGreen_exp;
+reg  last_EastRed_exp;
+reg  last_EastYellow_exp;
+reg [6:0] last_HEX_exp;
+reg  last_NorthGreen_exp;
+reg  last_NorthRed_exp;
+reg  last_NorthYellow_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:11] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 11'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	EN1_prev = EN1;
+	EN2_prev = EN2;
+	EN3_prev = EN3;
+	EN4_prev = EN4;
+	EastGreen_prev = EastGreen;
+	EastRed_prev = EastRed;
+	EastYellow_prev = EastYellow;
+	HEX_prev = HEX;
+	NorthGreen_prev = NorthGreen;
+	NorthRed_prev = NorthRed;
+	NorthYellow_prev = NorthYellow;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	EN1_expected_prev = EN1_expected;
+	EN2_expected_prev = EN2_expected;
+	EN3_expected_prev = EN3_expected;
+	EN4_expected_prev = EN4_expected;
+	EastGreen_expected_prev = EastGreen_expected;
+	EastRed_expected_prev = EastRed_expected;
+	EastYellow_expected_prev = EastYellow_expected;
+	HEX_expected_prev = HEX_expected;
+	NorthGreen_expected_prev = NorthGreen_expected;
+	NorthRed_expected_prev = NorthRed_expected;
+	NorthYellow_expected_prev = NorthYellow_expected;
+end
+
+
+
+// expected EN1
+initial
+begin
+	EN1_expected = 1'bX;
+end 
+
+// expected EN2
+initial
+begin
+	EN2_expected = 1'bX;
+end 
+
+// expected EN3
+initial
+begin
+	EN3_expected = 1'bX;
+end 
+
+// expected EN4
+initial
+begin
+	EN4_expected = 1'bX;
+end 
+// expected HEX[ 6 ]
+initial
+begin
+	HEX_expected[6] = 1'bX;
+end 
+// expected HEX[ 5 ]
+initial
+begin
+	HEX_expected[5] = 1'bX;
+end 
+// expected HEX[ 4 ]
+initial
+begin
+	HEX_expected[4] = 1'bX;
+end 
+// expected HEX[ 3 ]
+initial
+begin
+	HEX_expected[3] = 1'bX;
+end 
+// expected HEX[ 2 ]
+initial
+begin
+	HEX_expected[2] = 1'bX;
+end 
+// expected HEX[ 1 ]
+initial
+begin
+	HEX_expected[1] = 1'bX;
+end 
+// expected HEX[ 0 ]
+initial
+begin
+	HEX_expected[0] = 1'bX;
+end 
+
+// expected NorthRed
+initial
+begin
+	NorthRed_expected = 1'bX;
+end 
+
+// expected NorthYellow
+initial
+begin
+	NorthYellow_expected = 1'bX;
+end 
+
+// expected NorthGreen
+initial
+begin
+	NorthGreen_expected = 1'bX;
+end 
+
+// expected EastRed
+initial
+begin
+	EastRed_expected = 1'bX;
+end 
+
+// expected EastYellow
+initial
+begin
+	EastYellow_expected = 1'bX;
+end 
+
+// expected EastGreen
+initial
+begin
+	EastGreen_expected = 1'bX;
+end 
+// generate trigger
+always @(EN1_expected or EN1 or EN2_expected or EN2 or EN3_expected or EN3 or EN4_expected or EN4 or EastGreen_expected or EastGreen or EastRed_expected or EastRed or EastYellow_expected or EastYellow or HEX_expected or HEX or NorthGreen_expected or NorthGreen or NorthRed_expected or NorthRed or NorthYellow_expected or NorthYellow)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected EN1 = %b | expected EN2 = %b | expected EN3 = %b | expected EN4 = %b | expected EastGreen = %b | expected EastRed = %b | expected EastYellow = %b | expected HEX = %b | expected NorthGreen = %b | expected NorthRed = %b | expected NorthYellow = %b | ",EN1_expected_prev,EN2_expected_prev,EN3_expected_prev,EN4_expected_prev,EastGreen_expected_prev,EastRed_expected_prev,EastYellow_expected_prev,HEX_expected_prev,NorthGreen_expected_prev,NorthRed_expected_prev,NorthYellow_expected_prev);
+	$display("| real EN1 = %b | real EN2 = %b | real EN3 = %b | real EN4 = %b | real EastGreen = %b | real EastRed = %b | real EastYellow = %b | real HEX = %b | real NorthGreen = %b | real NorthRed = %b | real NorthYellow = %b | ",EN1_prev,EN2_prev,EN3_prev,EN4_prev,EastGreen_prev,EastRed_prev,EastYellow_prev,HEX_prev,NorthGreen_prev,NorthRed_prev,NorthYellow_prev);
+`endif
+	if (
+		( EN1_expected_prev !== 1'bx ) && ( EN1_prev !== EN1_expected_prev )
+		&& ((EN1_expected_prev !== last_EN1_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EN1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EN1_expected_prev);
+		$display ("     Real value = %b", EN1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_EN1_exp = EN1_expected_prev;
+	end
+	if (
+		( EN2_expected_prev !== 1'bx ) && ( EN2_prev !== EN2_expected_prev )
+		&& ((EN2_expected_prev !== last_EN2_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EN2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EN2_expected_prev);
+		$display ("     Real value = %b", EN2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_EN2_exp = EN2_expected_prev;
+	end
+	if (
+		( EN3_expected_prev !== 1'bx ) && ( EN3_prev !== EN3_expected_prev )
+		&& ((EN3_expected_prev !== last_EN3_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EN3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EN3_expected_prev);
+		$display ("     Real value = %b", EN3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_EN3_exp = EN3_expected_prev;
+	end
+	if (
+		( EN4_expected_prev !== 1'bx ) && ( EN4_prev !== EN4_expected_prev )
+		&& ((EN4_expected_prev !== last_EN4_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EN4 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EN4_expected_prev);
+		$display ("     Real value = %b", EN4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_EN4_exp = EN4_expected_prev;
+	end
+	if (
+		( EastGreen_expected_prev !== 1'bx ) && ( EastGreen_prev !== EastGreen_expected_prev )
+		&& ((EastGreen_expected_prev !== last_EastGreen_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EastGreen :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EastGreen_expected_prev);
+		$display ("     Real value = %b", EastGreen_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_EastGreen_exp = EastGreen_expected_prev;
+	end
+	if (
+		( EastRed_expected_prev !== 1'bx ) && ( EastRed_prev !== EastRed_expected_prev )
+		&& ((EastRed_expected_prev !== last_EastRed_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EastRed :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EastRed_expected_prev);
+		$display ("     Real value = %b", EastRed_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_EastRed_exp = EastRed_expected_prev;
+	end
+	if (
+		( EastYellow_expected_prev !== 1'bx ) && ( EastYellow_prev !== EastYellow_expected_prev )
+		&& ((EastYellow_expected_prev !== last_EastYellow_exp) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port EastYellow :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", EastYellow_expected_prev);
+		$display ("     Real value = %b", EastYellow_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_EastYellow_exp = EastYellow_expected_prev;
+	end
+	if (
+		( HEX_expected_prev[0] !== 1'bx ) && ( HEX_prev[0] !== HEX_expected_prev[0] )
+		&& ((HEX_expected_prev[0] !== last_HEX_exp[0]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX_expected_prev);
+		$display ("     Real value = %b", HEX_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_HEX_exp[0] = HEX_expected_prev[0];
+	end
+	if (
+		( HEX_expected_prev[1] !== 1'bx ) && ( HEX_prev[1] !== HEX_expected_prev[1] )
+		&& ((HEX_expected_prev[1] !== last_HEX_exp[1]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX_expected_prev);
+		$display ("     Real value = %b", HEX_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_HEX_exp[1] = HEX_expected_prev[1];
+	end
+	if (
+		( HEX_expected_prev[2] !== 1'bx ) && ( HEX_prev[2] !== HEX_expected_prev[2] )
+		&& ((HEX_expected_prev[2] !== last_HEX_exp[2]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX_expected_prev);
+		$display ("     Real value = %b", HEX_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_HEX_exp[2] = HEX_expected_prev[2];
+	end
+	if (
+		( HEX_expected_prev[3] !== 1'bx ) && ( HEX_prev[3] !== HEX_expected_prev[3] )
+		&& ((HEX_expected_prev[3] !== last_HEX_exp[3]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX_expected_prev);
+		$display ("     Real value = %b", HEX_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_HEX_exp[3] = HEX_expected_prev[3];
+	end
+	if (
+		( HEX_expected_prev[4] !== 1'bx ) && ( HEX_prev[4] !== HEX_expected_prev[4] )
+		&& ((HEX_expected_prev[4] !== last_HEX_exp[4]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX_expected_prev);
+		$display ("     Real value = %b", HEX_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_HEX_exp[4] = HEX_expected_prev[4];
+	end
+	if (
+		( HEX_expected_prev[5] !== 1'bx ) && ( HEX_prev[5] !== HEX_expected_prev[5] )
+		&& ((HEX_expected_prev[5] !== last_HEX_exp[5]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX_expected_prev);
+		$display ("     Real value = %b", HEX_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_HEX_exp[5] = HEX_expected_prev[5];
+	end
+	if (
+		( HEX_expected_prev[6] !== 1'bx ) && ( HEX_prev[6] !== HEX_expected_prev[6] )
+		&& ((HEX_expected_prev[6] !== last_HEX_exp[6]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX_expected_prev);
+		$display ("     Real value = %b", HEX_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_HEX_exp[6] = HEX_expected_prev[6];
+	end
+	if (
+		( NorthGreen_expected_prev !== 1'bx ) && ( NorthGreen_prev !== NorthGreen_expected_prev )
+		&& ((NorthGreen_expected_prev !== last_NorthGreen_exp) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port NorthGreen :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", NorthGreen_expected_prev);
+		$display ("     Real value = %b", NorthGreen_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_NorthGreen_exp = NorthGreen_expected_prev;
+	end
+	if (
+		( NorthRed_expected_prev !== 1'bx ) && ( NorthRed_prev !== NorthRed_expected_prev )
+		&& ((NorthRed_expected_prev !== last_NorthRed_exp) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port NorthRed :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", NorthRed_expected_prev);
+		$display ("     Real value = %b", NorthRed_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_NorthRed_exp = NorthRed_expected_prev;
+	end
+	if (
+		( NorthYellow_expected_prev !== 1'bx ) && ( NorthYellow_prev !== NorthYellow_expected_prev )
+		&& ((NorthYellow_expected_prev !== last_NorthYellow_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port NorthYellow :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", NorthYellow_expected_prev);
+		$display ("     Real value = %b", NorthYellow_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_NorthYellow_exp = NorthYellow_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#100000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module TLC_Project_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLOCK_50;
+reg EastSensor;
+reg NorthSensor;
+reg reset_PB0;
+// wires                                               
+wire EN1;
+wire EN2;
+wire EN3;
+wire EN4;
+wire EastGreen;
+wire EastRed;
+wire EastYellow;
+wire [6:0] HEX;
+wire NorthGreen;
+wire NorthRed;
+wire NorthYellow;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+TLC_Project i1 (
+// port map - connection between master ports and signals/registers   
+	.CLOCK_50(CLOCK_50),
+	.EN1(EN1),
+	.EN2(EN2),
+	.EN3(EN3),
+	.EN4(EN4),
+	.EastGreen(EastGreen),
+	.EastRed(EastRed),
+	.EastSensor(EastSensor),
+	.EastYellow(EastYellow),
+	.HEX(HEX),
+	.NorthGreen(NorthGreen),
+	.NorthRed(NorthRed),
+	.NorthSensor(NorthSensor),
+	.NorthYellow(NorthYellow),
+	.reset_PB0(reset_PB0)
+);
+
+// CLOCK_50
+always
+begin
+	CLOCK_50 = 1'b0;
+	CLOCK_50 = #10000 1'b1;
+	#10000;
+end 
+
+// reset_PB0
+initial
+begin
+	reset_PB0 = 1'b1;
+	reset_PB0 = #20000 1'b0;
+	reset_PB0 = #20000 1'b1;
+end 
+
+// NorthSensor
+initial
+begin
+	NorthSensor = 1'b0;
+	NorthSensor = #800000 1'b1;
+	NorthSensor = #320000 1'b0;
+	NorthSensor = #1900000 1'b1;
+end 
+
+// EastSensor
+initial
+begin
+	EastSensor = 1'b0;
+	EastSensor = #1420000 1'b1;
+	EastSensor = #4060000 1'b0;
+end 
+
+TLC_Project_vlg_sample_tst tb_sample (
+	.CLOCK_50(CLOCK_50),
+	.EastSensor(EastSensor),
+	.NorthSensor(NorthSensor),
+	.reset_PB0(reset_PB0),
+	.sampler_tx(sampler)
+);
+
+TLC_Project_vlg_check_tst tb_out(
+	.EN1(EN1),
+	.EN2(EN2),
+	.EN3(EN3),
+	.EN4(EN4),
+	.EastGreen(EastGreen),
+	.EastRed(EastRed),
+	.EastYellow(EastYellow),
+	.HEX(HEX),
+	.NorthGreen(NorthGreen),
+	.NorthRed(NorthRed),
+	.NorthYellow(NorthYellow),
+	.sampler_rx(sampler)
+);
+endmodule
+

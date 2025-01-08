@@ -1,0 +1,242 @@
+|TLC_Project
+CLOCK_50 => CLOCK_50.IN2
+reset_PB0 => reset_PB0.IN2
+NorthSensor => NorthSensor.IN1
+EastSensor => EastSensor.IN1
+NorthRed << Control:controller.NorthRed
+NorthYellow << Control:controller.NorthYellow
+NorthGreen << Control:controller.NorthGreen
+EastRed << Control:controller.EastRed
+EastYellow << Control:controller.EastYellow
+EastGreen << Control:controller.EastGreen
+HEX[0] << HEX[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[1] << HEX[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[2] << HEX[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[3] << HEX[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[4] << HEX[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[5] << HEX[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+HEX[6] << HEX[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+EN1 << EN1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+EN2 << EN2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+EN3 << EN3~reg0.DB_MAX_OUTPUT_PORT_TYPE
+EN4 << EN4~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Project|counter_divider:div
+c_clr => q[0].ACLR
+c_clr => q[1].ACLR
+c_clr => q[2].ACLR
+c_clr => q[3].ACLR
+c_clr => q[4].ACLR
+c_clr => q[5].ACLR
+c_clk => q[0].CLK
+c_clk => q[1].CLK
+c_clk => q[2].CLK
+c_clk => q[3].CLK
+c_clk => q[4].CLK
+c_clk => q[5].CLK
+clk_d <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Project|clock_divider_1hz:comb_3
+clk_in => clk_out~reg0.CLK
+clk_in => counter[0].CLK
+clk_in => counter[1].CLK
+clk_in => counter[2].CLK
+clk_in => counter[3].CLK
+clk_in => counter[4].CLK
+clk_in => counter[5].CLK
+clk_in => counter[6].CLK
+clk_in => counter[7].CLK
+clk_in => counter[8].CLK
+clk_in => counter[9].CLK
+clk_in => counter[10].CLK
+clk_in => counter[11].CLK
+clk_in => counter[12].CLK
+clk_in => counter[13].CLK
+clk_in => counter[14].CLK
+clk_in => counter[15].CLK
+clk_in => counter[16].CLK
+clk_in => counter[17].CLK
+clk_in => counter[18].CLK
+clk_in => counter[19].CLK
+clk_in => counter[20].CLK
+clk_in => counter[21].CLK
+clk_in => counter[22].CLK
+clk_in => counter[23].CLK
+clk_in => counter[24].CLK
+clk_in => counter[25].CLK
+reset => clk_out~reg0.ACLR
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+reset => counter[4].ACLR
+reset => counter[5].ACLR
+reset => counter[6].ACLR
+reset => counter[7].ACLR
+reset => counter[8].ACLR
+reset => counter[9].ACLR
+reset => counter[10].ACLR
+reset => counter[11].ACLR
+reset => counter[12].ACLR
+reset => counter[13].ACLR
+reset => counter[14].ACLR
+reset => counter[15].ACLR
+reset => counter[16].ACLR
+reset => counter[17].ACLR
+reset => counter[18].ACLR
+reset => counter[19].ACLR
+reset => counter[20].ACLR
+reset => counter[21].ACLR
+reset => counter[22].ACLR
+reset => counter[23].ACLR
+reset => counter[24].ACLR
+reset => counter[25].ACLR
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Project|Control:controller
+clk => turn.CLK
+clk => current.CLK
+clk => counter[0]~reg0.CLK
+clk => counter[1]~reg0.CLK
+clk => counter[2]~reg0.CLK
+clk => counter[3]~reg0.CLK
+clk => counter[4]~reg0.CLK
+clk => state[0]~reg0.CLK
+clk => state[1]~reg0.CLK
+clk => state[2]~reg0.CLK
+reset => ~NO_FANOUT~
+NorthSensor => always0.IN0
+NorthSensor => always0.IN0
+NorthSensor => always0.IN0
+NorthSensor => always0.IN0
+EastSensor => always0.IN1
+EastSensor => always0.IN1
+EastSensor => always0.IN1
+EastSensor => always0.IN1
+NorthRed <= NorthRed$latch.DB_MAX_OUTPUT_PORT_TYPE
+NorthYellow <= NorthYellow$latch.DB_MAX_OUTPUT_PORT_TYPE
+NorthGreen <= NorthGreen$latch.DB_MAX_OUTPUT_PORT_TYPE
+EastRed <= EastRed$latch.DB_MAX_OUTPUT_PORT_TYPE
+EastYellow <= EastYellow$latch.DB_MAX_OUTPUT_PORT_TYPE
+EastGreen <= EastGreen$latch.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[2] <= state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[0] <= counter[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[1] <= counter[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[2] <= counter[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[3] <= counter[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[4] <= counter[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Project|bin2bcd:north_converter
+binary[0] => LessThan2.IN8
+binary[0] => Add2.IN8
+binary[0] => bcd.DATAA
+binary[1] => LessThan1.IN8
+binary[1] => Add1.IN8
+binary[1] => bcd.DATAA
+binary[2] => LessThan0.IN6
+binary[2] => Add0.IN6
+binary[2] => bcd.DATAA
+binary[3] => LessThan0.IN5
+binary[3] => Add0.IN5
+binary[3] => bcd.DATAA
+binary[4] => LessThan0.IN4
+binary[4] => Add0.IN4
+binary[4] => bcd.DATAA
+tens[0] <= <GND>
+tens[1] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+ones[0] <= <GND>
+ones[1] <= <GND>
+ones[2] <= <GND>
+ones[3] <= <GND>
+
+
+|TLC_Project|bin2bcd:east_converter
+binary[0] => LessThan2.IN8
+binary[0] => Add2.IN8
+binary[0] => bcd.DATAA
+binary[1] => LessThan1.IN8
+binary[1] => Add1.IN8
+binary[1] => bcd.DATAA
+binary[2] => LessThan0.IN6
+binary[2] => Add0.IN6
+binary[2] => bcd.DATAA
+binary[3] => LessThan0.IN5
+binary[3] => Add0.IN5
+binary[3] => bcd.DATAA
+binary[4] => LessThan0.IN4
+binary[4] => Add0.IN4
+binary[4] => bcd.DATAA
+tens[0] <= <GND>
+tens[1] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+ones[0] <= <GND>
+ones[1] <= <GND>
+ones[2] <= <GND>
+ones[3] <= <GND>
+
+
+|TLC_Project|seven_segment_decoder:ssd0
+BIN[0] => Decoder0.IN3
+BIN[1] => Decoder0.IN2
+BIN[2] => Decoder0.IN1
+BIN[3] => Decoder0.IN0
+SSD[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSD[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSD[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSD[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSD[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSD[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSD[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Project|seven_segment_decoder:ssd1
+BIN[0] => Decoder0.IN3
+BIN[1] => Decoder0.IN2
+BIN[2] => Decoder0.IN1
+BIN[3] => Decoder0.IN0
+SSD[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSD[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSD[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSD[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSD[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSD[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSD[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Project|seven_segment_decoder:ssd2
+BIN[0] => Decoder0.IN3
+BIN[1] => Decoder0.IN2
+BIN[2] => Decoder0.IN1
+BIN[3] => Decoder0.IN0
+SSD[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSD[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSD[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSD[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSD[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSD[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSD[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TLC_Project|seven_segment_decoder:ssd3
+BIN[0] => Decoder0.IN3
+BIN[1] => Decoder0.IN2
+BIN[2] => Decoder0.IN1
+BIN[3] => Decoder0.IN0
+SSD[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSD[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSD[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSD[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSD[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSD[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSD[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
