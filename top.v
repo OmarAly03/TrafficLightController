@@ -53,23 +53,6 @@ module TLC_Project(
         .counter(counter)
     );
 
-    // // Binary to BCD converter for counter
-    // // Binary to BCD converters for both directions
-    // bin2bcd north_converter(
-    //     .binary(counter),
-    //     .tens(north_tens),
-    //     .ones(north_ones)
-    // );
-
-    // bin2bcd east_converter(
-    //     .binary(counter),
-    //     .tens(east_tens),
-    //     .ones(east_ones)
-    // );
-
-    // // Seven segment decoders
-
-
     counter_split north_split(
         .counter(counter),
         .tens(north_tens),

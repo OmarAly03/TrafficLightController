@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TLC_Project
-Wed Jan 08 20:36:40 2025
+Thu Jan 09 10:44:29 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -51,15 +51,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 08 20:36:40 2025      ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 09 10:44:29 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; TLC_Project                                ;
 ; Top-level Entity Name              ; TLC_Project                                ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 162                                        ;
-;     Total combinational functions  ; 157                                        ;
-;     Dedicated logic registers      ; 57                                         ;
-; Total registers                    ; 57                                         ;
+; Total logic elements               ; 169                                        ;
+;     Total combinational functions  ; 164                                        ;
+;     Dedicated logic registers      ; 55                                         ;
+; Total registers                    ; 55                                         ;
 ; Total pins                         ; 21                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -195,28 +195,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 162            ;
+; Estimated Total logic elements              ; 169            ;
 ;                                             ;                ;
-; Total combinational functions               ; 157            ;
+; Total combinational functions               ; 164            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 36             ;
-;     -- 3 input functions                    ; 30             ;
-;     -- <=2 input functions                  ; 91             ;
+;     -- 4 input functions                    ; 37             ;
+;     -- 3 input functions                    ; 42             ;
+;     -- <=2 input functions                  ; 85             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 110            ;
-;     -- arithmetic mode                      ; 47             ;
+;     -- normal mode                          ; 119            ;
+;     -- arithmetic mode                      ; 45             ;
 ;                                             ;                ;
-; Total registers                             ; 57             ;
-;     -- Dedicated logic registers            ; 57             ;
+; Total registers                             ; 55             ;
+;     -- Dedicated logic registers            ; 55             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 21             ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 33             ;
-; Total fan-out                               ; 596            ;
-; Average fan-out                             ; 2.33           ;
+; Maximum fan-out                             ; 31             ;
+; Total fan-out                               ; 613            ;
+; Average fan-out                             ; 2.35           ;
 +---------------------------------------------+----------------+
 
 
@@ -225,9 +225,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |TLC_Project                              ; 157 (14)          ; 57 (15)      ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |TLC_Project                                                                                                                           ; work         ;
-;    |Control:controller|                   ; 26 (26)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|Control:controller                                                                                                        ; work         ;
-;    |clock_divider_1hz:comb_3|             ; 54 (54)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|clock_divider_1hz:comb_3                                                                                                  ; work         ;
+; |TLC_Project                              ; 164 (15)          ; 55 (15)      ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |TLC_Project                                                                                                                           ; work         ;
+;    |Control:controller|                   ; 40 (40)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|Control:controller                                                                                                        ; work         ;
+;    |clock_divider_1hz:comb_3|             ; 47 (47)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|clock_divider_1hz:comb_3                                                                                                  ; work         ;
 ;    |counter_divider:div|                  ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_divider:div                                                                                                       ; work         ;
 ;    |counter_split:north_split|            ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split                                                                                                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Div0                                                                                 ; work         ;
@@ -239,7 +239,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |sign_div_unsign_8kh:divider| ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Mod0|lpm_divide_a8m:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
 ;                |alt_u_div_r2f:divider|    ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|counter_split:north_split|lpm_divide:Mod0|lpm_divide_a8m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_r2f:divider ; work         ;
 ;    |seven_segment_decoder:ssd0|           ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|seven_segment_decoder:ssd0                                                                                                ; work         ;
-;    |seven_segment_decoder:ssd1|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|seven_segment_decoder:ssd1                                                                                                ; work         ;
+;    |seven_segment_decoder:ssd1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|seven_segment_decoder:ssd1                                                                                                ; work         ;
 ;    |seven_segment_decoder:ssd2|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TLC_Project|seven_segment_decoder:ssd2                                                                                                ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -283,7 +283,12 @@ Encoding Type:  One-Hot
 ; seven_segment_decoder:ssd0|SSD[5]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
 ; seven_segment_decoder:ssd2|SSD[6]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
 ; seven_segment_decoder:ssd0|SSD[6]                   ; seven_segment_decoder:ssd0|Mux7 ; yes                    ;
-; Number of user-specified and inferred latches = 20  ;                                 ;                        ;
+; Control:controller|counter_next[0]                  ; Control:controller|LessThan0    ; yes                    ;
+; Control:controller|counter_next[1]                  ; Control:controller|LessThan0    ; yes                    ;
+; Control:controller|counter_next[2]                  ; Control:controller|LessThan0    ; yes                    ;
+; Control:controller|counter_next[3]                  ; Control:controller|LessThan0    ; yes                    ;
+; Control:controller|counter_next[4]                  ; Control:controller|LessThan0    ; yes                    ;
+; Number of user-specified and inferred latches = 25  ;                                 ;                        ;
 +-----------------------------------------------------+---------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -296,7 +301,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Control:controller|current            ; Stuck at GND due to stuck port data_in ;
 ; count~2                               ; Lost fanout                            ;
 ; count~3                               ; Lost fanout                            ;
-; Total Number of Removed Registers = 3 ;                                        ;
+; clock_divider_1hz:comb_3|counter[0]   ; Merged with counter_divider:div|q[0]   ;
+; clock_divider_1hz:comb_3|counter[1]   ; Merged with counter_divider:div|q[1]   ;
+; Total Number of Removed Registers = 5 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -305,10 +312,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 57    ;
-; Number of registers using Synchronous Clear  ; 5     ;
+; Total registers                              ; 55    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 33    ;
+; Number of registers using Asynchronous Clear ; 31    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 5     ;
 ; Number of registers using Preset             ; 0     ;
@@ -337,11 +344,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: clock_divider_1hz:comb_3 ;
-+----------------+----------+-------------------------------------------+
-; Parameter Name ; Value    ; Type                                      ;
-+----------------+----------+-------------------------------------------+
-; DIV_FACTOR     ; 49999999 ; Signed Integer                            ;
-+----------------+----------+-------------------------------------------+
++----------------+---------+--------------------------------------------+
+; Parameter Name ; Value   ; Type                                       ;
++----------------+---------+--------------------------------------------+
+; DIV_FACTOR     ; 6250000 ; Signed Integer                             ;
++----------------+---------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -430,7 +437,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jan 08 20:36:39 2025
+    Info: Processing started: Thu Jan 09 10:44:28 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TLC_Project -c TLC_Project
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file counter_split.v
@@ -455,20 +462,26 @@ Critical Warning (10237): Verilog HDL warning at counter_divider.v(14): can't in
 Info (12128): Elaborating entity "clock_divider_1hz" for hierarchy "clock_divider_1hz:comb_3"
 Warning (10230): Verilog HDL assignment warning at clock_divider_1hz.v(18): truncated value with size 32 to match size of target (26)
 Info (12128): Elaborating entity "Control" for hierarchy "Control:controller"
-Warning (10230): Verilog HDL assignment warning at Control.v(26): truncated value with size 32 to match size of target (5)
-Warning (10270): Verilog HDL Case Statement warning at Control.v(135): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at Control.v(135): inferring latch(es) for variable "NorthRed", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Control.v(135): inferring latch(es) for variable "NorthYellow", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Control.v(135): inferring latch(es) for variable "NorthGreen", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Control.v(135): inferring latch(es) for variable "EastRed", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Control.v(135): inferring latch(es) for variable "EastYellow", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Control.v(135): inferring latch(es) for variable "EastGreen", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "EastGreen" at Control.v(135)
-Info (10041): Inferred latch for "EastYellow" at Control.v(135)
-Info (10041): Inferred latch for "EastRed" at Control.v(135)
-Info (10041): Inferred latch for "NorthGreen" at Control.v(135)
-Info (10041): Inferred latch for "NorthYellow" at Control.v(135)
-Info (10041): Inferred latch for "NorthRed" at Control.v(135)
+Warning (10230): Verilog HDL assignment warning at Control.v(29): truncated value with size 32 to match size of target (5)
+Warning (10240): Verilog HDL Always Construct warning at Control.v(28): inferring latch(es) for variable "counter_next", which holds its previous value in one or more paths through the always construct
+Warning (10270): Verilog HDL Case Statement warning at Control.v(139): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at Control.v(139): inferring latch(es) for variable "NorthRed", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(139): inferring latch(es) for variable "NorthYellow", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(139): inferring latch(es) for variable "NorthGreen", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(139): inferring latch(es) for variable "EastRed", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(139): inferring latch(es) for variable "EastYellow", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(139): inferring latch(es) for variable "EastGreen", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "EastGreen" at Control.v(139)
+Info (10041): Inferred latch for "EastYellow" at Control.v(139)
+Info (10041): Inferred latch for "EastRed" at Control.v(139)
+Info (10041): Inferred latch for "NorthGreen" at Control.v(139)
+Info (10041): Inferred latch for "NorthYellow" at Control.v(139)
+Info (10041): Inferred latch for "NorthRed" at Control.v(139)
+Info (10041): Inferred latch for "counter_next[0]" at Control.v(28)
+Info (10041): Inferred latch for "counter_next[1]" at Control.v(28)
+Info (10041): Inferred latch for "counter_next[2]" at Control.v(28)
+Info (10041): Inferred latch for "counter_next[3]" at Control.v(28)
+Info (10041): Inferred latch for "counter_next[4]" at Control.v(28)
 Info (12128): Elaborating entity "counter_split" for hierarchy "counter_split:north_split"
 Warning (10230): Verilog HDL assignment warning at counter_split.v(8): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at counter_split.v(9): truncated value with size 32 to match size of target (4)
@@ -536,9 +549,9 @@ Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
 Warning (13012): Latch Control:controller|NorthRed has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|state[0]
 Warning (13012): Latch Control:controller|NorthYellow has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|state[0]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|state[2]
 Warning (13012): Latch Control:controller|NorthGreen has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|state[1]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|state[0]
 Warning (13012): Latch seven_segment_decoder:ssd2|SSD[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Control:controller|counter[1]
 Warning (13012): Latch seven_segment_decoder:ssd2|SSD[1] has unsafe behavior
@@ -557,13 +570,13 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 183 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 190 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 162 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 4629 megabytes
-    Info: Processing ended: Wed Jan 08 20:36:40 2025
+    Info (21061): Implemented 169 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4630 megabytes
+    Info: Processing ended: Thu Jan 09 10:44:29 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

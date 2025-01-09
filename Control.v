@@ -13,7 +13,7 @@ module Control(
     output reg [4:0] counter
 );
 
-    wire [4:0] counter_next;
+    reg [4:0] counter_next;
     reg turn,    // North --> 0, East --> 1
         current; // North --> 0, East --> 1
 
@@ -22,8 +22,12 @@ module Control(
     parameter S2_East_Y_North_Y = 3'd2;
     parameter S3_East_G_North_R = 3'd3;
     parameter S4_North_Y_East_Y = 3'd4;
-
-    assign counter_next = counter + 1;
+	
+	 always @(*)
+		begin
+			if(counter < 30)
+				counter_next = counter + 1;
+		end
 
     initial 
         begin
@@ -169,27 +173,15 @@ module Control(
                         EastYellow = 1;
                         EastGreen = 0;
                     end
-                S1_Check:
-                    begin
-                        if(current == 0)
-                            begin
-                                NorthRed = 1;
-                                NorthYellow = 1;
-                                NorthGreen = 0;
-                                EastRed = 0;
-                                EastYellow = 1;
-                                EastGreen = 1;
-                            end
-                        else
-                            begin
-                                NorthRed = 0;
-                                NorthYellow = 1;
-                                NorthGreen = 1;
-                                EastRed = 1;
-                                EastYellow = 1;
-                                EastGreen = 0;
-                            end
-                    end
+                S1_Check:					
+							  begin
+									NorthRed = 1;
+									NorthYellow = 0;
+									NorthGreen = 1;
+									EastRed = 1;
+									EastYellow = 0;
+									EastGreen = 1;
+								end
             endcase
         end
 endmodule
